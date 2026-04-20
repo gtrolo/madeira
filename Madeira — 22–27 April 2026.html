@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><script type='text/javascript' src='https://c3259506-e5e3-47bf-9c24-8607282f172e.claudeusercontent.com/bgWVuYC3-Vy4Ih3TVC9-Yt90npV056kcnvVPMBhKsIPpuAi6g_tIdWLRSLp_cyZDISX-BGYLCk5uoTeW4QEGsFukHMFj7Hhn9jIr1Ow9_HyA4p1qFiXfIvFYAKnQJkx2OuPBzm1T8UKMGIVc8BlbbbCWN6eBLXqBoC7FoS570w3rjyWYbrt5R1XMOiQaeLSzXTY5U8JfJ5fUviSIw0-grl2PyuMW4nf21Uigu5Vt2OW231rW7MNcF7gfmcrZNkZmJackYehQXhx5TSfB8_HaQSrBzRBzbds1dnoVe725yldyLf8C6Ele-EXdQt4x99AejnALAFvzKhjx_hihiwSXrx_0TLcdaWFy1tosN4c22NWKpOjR11pcZUJRap94QFZ69Dlu25eDzJ9tW5xadVzqZktkaFhaa60EAWPIzj-5S0Cfhrp8Gfu5uAJSvCTiDLylGTWxB4rIBKNs_0dhOj2MPuZWq3PTryNEt3otwnLNXe2DQWElfp-YaBdAkhKrBLQwuJ1dZWGXBlRUKeVcV4E2_l8wNP2LAEir0mgtx-fw3ZGL6OTRL4hdM5j0tplaBOu3cMmjy8EIeG5RmY20BfBZGcFI49OIjKu9ch6OJjJe6M9DZbxhiLP6yk2CC4_uU62vKfFqR8e2dMXYGbeKrNsk9bUpnxJPK8d5Y5IWd5ACJFA9fJ2A3-A6Oul9n_U9168a6FB9dW6IapPPrrMURwtWAibcpdY5HIOLsgtDHMUM09pYrgGsoHZsvsBRQXIzoD0UVliXlPUsooDdhNy2nVphtOye3OmJxqeCWtBjHpbbomOBgL3kABiMI1V0Yfag98eXluehvx0qg3xqgSMnHGNe_qHU9JrcI1G56fUzg_NJdyBJfaEazNkcjxOj_BPwAOr4cCSEbLmOkA'></script>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var W=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var Y=30000;document.addEventListener("DOMContentLoaded",()=>{const D="transform-react-jsx-source";document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((C,F)=>{const Q=C.getAttribute("data-plugins")||"";if(Q.indexOf(D)<0){C.setAttribute("data-plugins",Q?`${Q},${D}`:D)}if(!C.hasAttribute("data-filename")){C.setAttribute("data-filename",C.getAttribute("src")||`inline-${F}`)}})});var K=window.parent;if(K&&K!==window){const D=(k,f)=>{try{K.postMessage({__omelette_log:true,type:k,data:f},"*")}catch{}};["log","warn","error"].forEach((k)=>{const f=console[k];console[k]=(...w)=>{const z=w.map((h)=>{try{return typeof h==="object"?JSON.stringify(h):String(h)}catch{try{return String(h)}catch{return"[unstringifiable]"}}}).join(" ");D(k,z);f.apply(console,w)}});window.addEventListener("error",(k)=>{const f=k.target;if(f&&f!==window&&f.tagName){const w=f.src||f.href||"";D("resource_error",`${f.tagName} failed to load: ${w}`)}else{D("error",`${k.message||"Unknown error"} at ${k.filename||"?"}:${k.lineno||0}:${k.colno||0}`)}},true);window.addEventListener("unhandledrejection",(k)=>{const f=k.reason;const w=f instanceof Error?`${f.message} ${f.stack}`:String(f);D("error",`Unhandled rejection: ${w}`)});const C=()=>{try{K.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")C();else window.addEventListener("load",C);if(window.ResizeObserver)new ResizeObserver(C).observe(document.documentElement);const F={};let Q=0;window.claude={complete(k){return new Promise((f,w)=>{if(!W.length){w(new Error("claude.complete: no parent origin"));return}const z=`c${++Q}`;const h=()=>setTimeout(()=>{delete F[z];w(new Error(`claude.complete: no data for ${Y/1000}s`))},Y);const J=h();F[z]={resolve:f,reject:w,text:"",t:J,arm:h};try{for(const V of W){K.postMessage({__om_api:true,id:z,body:k},V)}}catch(V){clearTimeout(J);delete F[z];w(V)}})}};const X=(k)=>{try{return JSON.stringify(k)}catch{return JSON.stringify(String(k))}};window.addEventListener("message",(k)=>{if(W.indexOf(k.origin)<0)return;if(k.source!==K)return;const f=k.data;if(!f)return;if(f.__om_api_r){const h=F[f.id];if(!h)return;if(f.error!=null){clearTimeout(h.t);delete F[f.id];h.reject(new Error(f.error));return}if(f.chunk!=null){clearTimeout(h.t);h.t=h.arm();h.text+=f.chunk;return}if(f.done){clearTimeout(h.t);delete F[f.id];h.resolve(f.text!=null?f.text:h.text);return}return}if(!f.__om_eval)return;const w=f;const z=(h)=>{k.source.postMessage({...h,__om_eval_r:1,id:w.id},k.origin)};try{const h=(0,eval)(w.code);if(h&&typeof h.then==="function"){h.then((J)=>z({ok:1,v:X(J)}),(J)=>z({ok:0,e:String(J)}))}else{z({ok:1,v:X(h)})}}catch(h){z({ok:0,e:String(h)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madeira — 22–27 April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1b2a;
+  --coral: #c95d3a;
+  --gold: #c8a84b;
+  --sky: #3a7fa8;
+  --green: #3a7a5a;
+  --sand: #f2e8d5;
+  --sand-light: #faf6ef;
+  --white: #fffdf9;
+  --text: #1a1208;
+  --muted: #6b5e4e;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--sand-light); color:var(--text); overflow-x:hidden; }
+
+/* HERO */
+.hero { position:relative; height:100vh; min-height:620px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.hero-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=1600&q=90&fit=crop') center 35%/cover; animation:hzoom 18s ease-in-out infinite alternate; }
+@keyframes hzoom { from{transform:scale(1.04)} to{transform:scale(1.10) translateY(-1%)} }
+.hero-ov { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(13,27,42,.2) 0%, rgba(13,27,42,.55) 60%, rgba(13,27,42,.9) 100%); }
+.hero-c { position:relative; text-align:center; color:var(--white); padding:0 2rem; }
+.hero-eye { font-size:.7rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; font-weight:500; }
+.hero-h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(4.5rem,10vw,9rem); font-weight:300; line-height:.9; letter-spacing:-.02em; margin-bottom:1.2rem; }
+.hero-h1 em { font-style:italic; color:#e8d9b0; }
+.hero-sub { font-size:.95rem; letter-spacing:.1em; opacity:.8; }
+.hero-scroll { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,.5); font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+.hero-line { width:1px; height:36px; background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent); animation:pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+
+/* WEATHER STRIP */
+.weather-bar { background:var(--navy); padding:2.5rem 2rem 2rem; position:sticky; top:0; z-index:100; transition:padding .3s; }
+.weather-bar.compact { padding:1rem 2rem; }
+.wb-label { text-align:center; font-size:.6rem; letter-spacing:.25em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:1.2rem; transition:opacity .3s; }
+.weather-bar.compact .wb-label { opacity:0; height:0; margin:0; overflow:hidden; }
+.wb-days { display:flex; justify-content:center; max-width:860px; margin:0 auto; }
+.wbd { flex:1; text-align:center; padding:.9rem .4rem; border-right:1px solid rgba(255,255,255,.07); }
+.wbd:last-child { border-right:none; }
+.wbd-d { font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:.25rem; }
+.wbd-n { font-size:.7rem; font-weight:500; color:rgba(255,255,255,.6); margin-bottom:.6rem; }
+.wbd-temp { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; color:white; line-height:1; margin-bottom:.2rem; }
+.wbd-desc { font-size:.55rem; color:rgba(255,255,255,.38); line-height:1.4; }
+.wbd-uv { display:inline-block; margin-top:.35rem; background:var(--coral); color:white; font-size:.5rem; letter-spacing:.1em; text-transform:uppercase; padding:.15rem .4rem; border-radius:2px; }
+
+/* DAY SECTIONS */
+.day-section { max-width:1120px; margin:0 auto; padding:4rem 2rem 2rem; }
+.day-header { display:flex; align-items:flex-end; gap:2rem; margin-bottom:3rem; padding-bottom:1.5rem; border-bottom:1px solid rgba(13,27,42,.1); }
+.day-num { font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; color:rgba(13,27,42,.12); line-height:1; flex-shrink:0; }
+.day-header-info {}
+.day-date { font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; color:var(--coral); font-weight:500; margin-bottom:.3rem; }
+.day-title { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:400; color:var(--navy); line-height:1.1; margin-bottom:.3rem; }
+.day-strategy { font-size:.8rem; color:var(--muted); font-style:italic; }
+.day-weather-badge { margin-left:auto; flex-shrink:0; background:var(--navy); color:white; padding:.6rem 1.1rem; border-radius:3px; text-align:center; }
+.dwb-t { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; line-height:1; }
+.dwb-d { font-size:.6rem; opacity:.6; letter-spacing:.06em; margin-top:.15rem; }
+
+/* ACTIVITIES GRID */
+.activities { display:flex; flex-direction:column; gap:2.5rem; margin-bottom:3rem; }
+
+/* ACTIVITY CARD */
+.ac { display:grid; grid-template-columns:400px 1fr; gap:0; border-radius:4px; overflow:hidden; box-shadow:0 8px 40px rgba(13,27,42,.09); opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s ease; }
+.ac.visible { opacity:1; transform:translateY(0); }
+.ac:nth-child(even) { grid-template-columns:1fr 400px; }
+.ac:nth-child(even) .ac-photo { order:2; }
+.ac:nth-child(even) .ac-body { order:1; }
+
+.ac-photo { position:relative; overflow:hidden; min-height:320px; }
+.ac-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 7s ease; }
+.ac:hover .ac-photo img { transform:scale(1.04); }
+.ac-photo-ov { position:absolute; inset:0; background:linear-gradient(135deg,rgba(13,27,42,.35) 0%,transparent 55%); }
+.time-pill { position:absolute; top:1.2rem; left:1.2rem; background:rgba(13,27,42,.75); backdrop-filter:blur(6px); color:white; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; padding:.35rem .7rem; border-radius:2px; font-weight:500; }
+.ac-type-icon { position:absolute; bottom:1.2rem; right:1.2rem; width:36px; height:36px; background:rgba(255,255,255,.15); backdrop-filter:blur(8px); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+
+.ac-body { background:var(--white); padding:2.2rem; display:flex; flex-direction:column; gap:1rem; }
+.ac-title { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; color:var(--navy); line-height:1.15; }
+.ac-subtitle { font-size:.75rem; color:var(--coral); font-weight:500; letter-spacing:.05em; margin-top:-.5rem; }
+.ac-desc { font-size:.8rem; color:var(--muted); line-height:1.7; }
+
+/* AI tip */
+.ai-tip { background:linear-gradient(135deg, rgba(13,27,42,.04), rgba(200,168,75,.06)); border-left:2px solid var(--gold); padding:.8rem 1rem; border-radius:0 3px 3px 0; }
+.ai-tip-label { font-size:.55rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:.35rem; display:flex; align-items:center; gap:.4rem; }
+.ai-tip-label::before { content:''; width:6px; height:6px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+.ai-tip-text { font-size:.77rem; color:var(--text); line-height:1.65; }
+.ai-tip-text.loading { color:var(--muted); font-style:italic; }
+
+/* weather alt */
+.weather-alt { border:1px solid rgba(13,27,42,.08); border-radius:3px; overflow:hidden; }
+.wa-toggle { width:100%; background:none; border:none; padding:.7rem 1rem; text-align:left; cursor:pointer; display:flex; align-items:center; justify-content:space-between; font-family:'DM Sans',sans-serif; font-size:.72rem; color:var(--muted); }
+.wa-toggle:hover { background:rgba(13,27,42,.03); }
+.wa-icon { font-size:.8rem; transition:transform .25s; }
+.wa-toggle.open .wa-icon { transform:rotate(180deg); }
+.wa-content { display:none; padding:.8rem 1rem 1rem; background:rgba(13,27,42,.02); border-top:1px solid rgba(13,27,42,.06); }
+.wa-content.open { display:block; }
+.wa-alt-title { font-size:.72rem; font-weight:500; color:var(--navy); margin-bottom:.35rem; }
+.wa-alt-desc { font-size:.72rem; color:var(--muted); line-height:1.6; }
+
+/* activity weather */
+.ac-weather {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .8rem;
+  background: rgba(13,27,42,.04);
+  border-radius: 3px;
+  border: 1px solid rgba(13,27,42,.07);
+  margin-top: -.2rem;
+}
+.ac.dinner .ac-weather { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.09); }
+.acw-icon { flex-shrink: 0; }
+.acw-temp { font-family:'Cormorant Garamond',serif; font-size: 1.2rem; font-weight: 300; color: var(--navy); line-height: 1; }
+.ac.dinner .acw-temp { color: white; }
+.acw-info { flex: 1; }
+.acw-cond { font-size: .68rem; font-weight: 500; color: var(--text); line-height: 1.2; }
+.acw-loc { font-size: .58rem; color: var(--muted); letter-spacing: .04em; }
+.ac.dinner .acw-cond { color: rgba(255,255,255,.8); }
+.ac.dinner .acw-loc { color: rgba(255,255,255,.4); }
+.acw-uv { font-size: .52rem; letter-spacing: .08em; text-transform: uppercase; background: var(--coral); color: white; padding: .15rem .4rem; border-radius: 2px; font-weight: 500; }
+.acw-note { font-size: .58rem; color: var(--sky); font-weight: 500; }
+.ac.dinner .acw-note { color: #7bbcda; }
+
+/* chips */
+.ac-chips { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.2rem; }
+.chip { font-size:.6rem; letter-spacing:.06em; padding:.25rem .6rem; border-radius:2px; border:1px solid rgba(13,27,42,.1); color:var(--muted); display:flex; align-items:center; gap:.3rem; }
+.chip.highlight { background:rgba(201,93,58,.08); border-color:rgba(201,93,58,.25); color:var(--coral); }
+.chip.tip { background:rgba(58,127,168,.08); border-color:rgba(58,127,168,.25); color:var(--sky); }
+
+/* DINNER CARD — slightly different style */
+.ac.dinner .ac-body { background:var(--navy); }
+.ac.dinner .ac-title { color:white; }
+.ac.dinner .ac-subtitle { color:var(--gold); }
+.ac.dinner .ac-desc { color:rgba(255,255,255,.6); }
+.ac.dinner .ai-tip { background:rgba(255,255,255,.05); border-color:var(--gold); }
+.ac.dinner .ai-tip-text { color:rgba(255,255,255,.75); }
+.ac.dinner .weather-alt { border-color:rgba(255,255,255,.1); }
+.ac.dinner .wa-toggle { color:rgba(255,255,255,.45); }
+.ac.dinner .wa-content { background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.08); }
+.ac.dinner .wa-alt-title { color:white; }
+.ac.dinner .wa-alt-desc { color:rgba(255,255,255,.5); }
+.ac.dinner .chip { border-color:rgba(255,255,255,.15); color:rgba(255,255,255,.5); }
+.ac.dinner .chip.highlight { background:rgba(201,93,58,.2); border-color:rgba(201,93,58,.4); color:#e88a70; }
+.ac.dinner .chip.tip { background:rgba(58,127,168,.15); border-color:rgba(58,127,168,.3); color:#7bbcda; }
+
+/* SECTION DIVIDER */
+.day-divider { height:1px; background:linear-gradient(to right, transparent, rgba(13,27,42,.1), transparent); max-width:1120px; margin:0 auto; }
+
+/* LOGISTICS */
+.logistics { background:var(--navy); padding:5rem 2rem; margin-top:3rem; }
+.log-inner { max-width:1120px; margin:0 auto; }
+.log-title { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:white; text-align:center; margin-bottom:3rem; }
+.log-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem; }
+.log-item { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:4px; padding:1.5rem; }
+.log-ico { font-size:1.4rem; margin-bottom:.7rem; }
+.log-lbl { font-size:.65rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin-bottom:.4rem; font-weight:500; }
+.log-txt { font-size:.8rem; color:rgba(255,255,255,.6); line-height:1.65; }
+.log-txt strong { color:white; }
+
+/* FOOTER */
+footer { background:var(--sand); text-align:center; padding:3rem 2rem; }
+footer p:first-child { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:300; color:var(--muted); margin-bottom:.4rem; }
+footer p:last-child { font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; color:var(--coral); }
+
+/* responsive */
+@media(max-width:780px) {
+  .ac, .ac:nth-child(even) { grid-template-columns:1fr; }
+  .ac:nth-child(even) .ac-photo { order:0; }
+  .ac:nth-child(even) .ac-body { order:0; }
+  .ac-photo { min-height:240px; }
+  .day-num { font-size:3rem; }
+  .day-weather-badge { display:none; }
+}
+
+/* weather SVG helpers */
+svg.wi { display:block; margin:0 auto .6rem; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <p class="hero-eye">22 – 28 april 2026 &nbsp;·&nbsp; Eigen huurauto &nbsp;·&nbsp; Funchal, Madeira</p>
+    <h1 class="hero-h1">Madeira<br><em>Reisplan</em></h1>
+    <p class="hero-sub">Zon &nbsp;·&nbsp; Comfort &nbsp;·&nbsp; Eigen regie</p>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-line"></div></div>
+</section>
+
+<!-- WEATHER BAR -->
+<div class="weather-bar" id="wbar">
+  <p class="wb-label">Weerbericht · Funchal regio · 22–27 april 2026</p>
+  <div class="wb-days">
+    <div class="wbd"><div class="wbd-d">Wo 22 apr</div><div class="wbd-n">Dag 1</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/><ellipse cx="22" cy="23" rx="11" ry="6" fill="#b0c0d4"/></svg>
+      <div class="wbd-temp">14°</div><div class="wbd-desc">Bewolkt · Grijs</div>
+    </div>
+    <div class="wbd"><div class="wbd-d">Do 23 apr</div><div class="wbd-n">Dag 2</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><circle cx="22" cy="13" r="6" fill="#f5c842" opacity=".9"/><line x1="22" y1="4" x2="22" y2="6" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="31" y1="13" x2="29" y2="13" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><ellipse cx="16" cy="24" rx="12" ry="6" fill="#b0c0d4"/><ellipse cx="10" cy="26" rx="8" ry="5" fill="#b0c0d4"/><ellipse cx="22" cy="25" rx="10" ry="5.5" fill="#b0c0d4"/></svg>
+      <div class="wbd-temp">15°</div><div class="wbd-desc">Wisselvallig<br>Zonniger west</div>
+    </div>
+    <div class="wbd"><div class="wbd-d">Vr 24 apr</div><div class="wbd-n">Dag 3</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><ellipse cx="18" cy="18" rx="13" ry="7" fill="#7fa0b8"/><ellipse cx="11" cy="21" rx="8" ry="5.5" fill="#7fa0b8"/><ellipse cx="24" cy="20" rx="9" ry="6" fill="#7fa0b8"/><line x1="12" y1="28" x2="10" y2="33" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="28" x2="16" y2="33" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="28" x2="22" y2="33" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="wbd-temp">13°</div><div class="wbd-desc">Regen bergen<br>Grotten ideaal</div>
+    </div>
+    <div class="wbd"><div class="wbd-d">Za 25 apr</div><div class="wbd-n">Dag 4</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><circle cx="18" cy="18" r="8" fill="#f5c842"/><line x1="18" y1="4" x2="18" y2="8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="28" x2="18" y2="32" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="8" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="18" x2="32" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="7.8" y1="7.8" x2="10.6" y2="10.6" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="25.4" y1="25.4" x2="28.2" y2="28.2" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="7.8" y1="28.2" x2="10.6" y2="25.4" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="25.4" y1="10.6" x2="28.2" y2="7.8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="wbd-temp">16°</div><div class="wbd-desc">Zonnig</div><span class="wbd-uv">UV 8</span>
+    </div>
+    <div class="wbd"><div class="wbd-d">Zo 26 apr</div><div class="wbd-n">Dag 5</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><circle cx="22" cy="13" r="6" fill="#f5c842" opacity=".9"/><line x1="22" y1="4" x2="22" y2="6" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="31" y1="13" x2="29" y2="13" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><ellipse cx="16" cy="24" rx="12" ry="6" fill="#b0c0d4"/><ellipse cx="10" cy="26" rx="8" ry="5" fill="#b0c0d4"/><ellipse cx="22" cy="25" rx="10" ry="5.5" fill="#b0c0d4"/></svg>
+      <div class="wbd-temp">15°</div><div class="wbd-desc">Bewolkt · Droog</div>
+    </div>
+    <div class="wbd"><div class="wbd-d">Ma 27 apr</div><div class="wbd-n">Dag 6</div>
+      <svg class="wi" width="32" height="32" viewBox="0 0 36 36"><circle cx="18" cy="18" r="9" fill="#f5c842"/><line x1="18" y1="3" x2="18" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="18" y1="29" x2="18" y2="33" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="3" y1="18" x2="7" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="18" x2="33" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="7" x2="10" y2="10" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="26" y1="26" x2="29" y2="29" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="29" x2="10" y2="26" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="26" y1="10" x2="29" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div class="wbd-temp">17°</div><div class="wbd-desc">Volle zon</div><span class="wbd-uv">UV 9</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ DAY 1 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">01</div>
+    <div class="day-header-info">
+      <div class="day-date">Woensdag 22 april</div>
+      <h2 class="day-title">De Luxe Landing</h2>
+      <p class="day-strategy">Aankomstdag — rustig opbouwen in de stad. Geen grote wandelingen, maximum comfort.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg>
+      <div class="dwb-t">14°C</div><div class="dwb-d">Bewolkt · Funchal</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="Kabelbaan Funchal naar Monte en de Tropical Garden">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=700&q=85&fit=crop" alt="Kabelbaan Funchal" onerror="this.src='https://images.unsplash.com/photo-1555993539-1732b0258235?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">🚡</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Kabelbaan Funchal → Monte</div>
+        <div class="ac-subtitle">Teleférico do Funchal · 15 min omhoog</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">12°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Koeler boven</div><div class="acw-loc">Monte, ±600m hoogte</div></div><span class="acw-note">Neem een extra laag mee</span></div>
+        <p class="ac-desc">De kabelbaan van Funchal naar het dorp Monte is één van de mooiste manieren om de stad te verlaten. Vanuit de gondel zie je het volledige panorama van Funchal en de haven zich uitspreiden. Boven aangekomen wacht de weelderige <strong>Tropical Garden</strong> (Jardim Tropical Monte Palace), gevuld met azulejos, Afrikaanse sculpturen en exotische planten. Rij er door heen in een elektrisch karretje — geen stap lopen nodig.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="0">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>☁️ Als het erg bewolkt of koud is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Funchal Old Town & Mercado</div><div class="wa-alt-desc">Sla de kabelbaan over en wandel door de <strong>Zona Velha</strong> — de kleurrijke beschilderde deuren (Portas Abertas) zijn droog te bekijken. Combineer met een bezoek aan het Mercado dos Lavradores voor een indruk van het lokale leven.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 2 uur</span>
+          <span class="chip tip">Kaartje online vooraf kopen</span>
+          <span class="chip">📍 Largo das Babosas, Funchal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Toboggan Monte Funchal, de rieten slee rit naar beneden">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=700&q=85&fit=crop" alt="Monte toboggan Madeira">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🛷</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Toboggan naar beneden</div>
+        <div class="ac-subtitle">Carreiros do Monte · Iconische traditie sinds 1850</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">13°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Droog</div><div class="acw-loc">Monte → Livramento, Funchal</div></div><span class="acw-note">Slee rijdt ook bij bewolking</span></div>
+        <p class="ac-desc">De Monte Toboggan is misschien wel de meest iconische activiteit van heel Madeira. Twee mannen in witte pakken en strohoeden sturen een rieten slee met maximaal 2 personen over de kinderkopjeswegen naar beneden — tot 48 km/u. De rit duurt zo'n 10 minuten en eindigt in de wijk Livramento, van waar je een Bolt of taxi terug naar de auto neemt. Spectaculair en zonder inspanning.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="1">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>☁️ Als het te nat is voor de slee…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: terug per kabelbaan</div><div class="wa-alt-desc">Je kunt ook teruggaan met de kabelbaan (enkeltje naar beneden is mogelijk). Combineer dan de middag met een bezoek aan de <strong>Igreja de Nossa Senhora do Monte</strong> — de kerk vanwaar Napoleon ooit de haven bestudeerde.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 15 min rit</span>
+          <span class="chip highlight">€ 30 p.p.</span>
+          <span class="chip tip">Bij regen: slee rijdt soms niet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="Restaurant Design Centre Nini Andrade Silva Funchal diner">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop" alt="Nini Andrade Silva restaurant">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🍽️</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Diner · Design Centre Nini Andrade Silva</div>
+        <div class="ac-subtitle">Fine dining · Pier boven de Atlantische Oceaan</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".6"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">12°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Avond</div><div class="acw-loc">Funchal haven, zeeniveau</div></div><span class="acw-note">Binnen — weer irrelevant</span></div>
+        <p class="ac-desc">Dit restaurant, ontworpen door de bekende Madeireense designer Nini Andrade Silva, zweeft letterlijk boven het water op een pier in de haven van Funchal. Moderne Portugese keuken met lokale ingrediënten als espada (zwaard vis), lapas (patella) en Madeireense wijn. De rustige, intieme sfeer maakt het een perfecte eerste avond — elegant maar nooit overdreven formeel.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="2">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Ander restaurant als alternatief…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Il Gallo d'Oro</div><div class="wa-alt-desc">Twee Michelinsterren in het Cliff Bay Hotel. Reserveer ruim van tevoren. Fantastisch als je een meer exclusieve eerste avond wilt.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reservering verplicht</span>
+          <span class="chip">Smart Casual</span>
+          <span class="chip tip">Vraag tafel aan het raam</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="day-divider"></div>
+
+<!-- ═══════════════════════════════════ DAY 2 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">02</div>
+    <div class="day-header-info">
+      <div class="day-date">Donderdag 23 april</div>
+      <h2 class="day-title">De Zonnige Zuidwestkust</h2>
+      <p class="day-strategy">Westelijke tunnelroute — statistisch altijd zonniger dan Funchal. Spectaculair klif + zandstrand.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><circle cx="22" cy="13" r="6" fill="#f5c842" opacity=".9"/><ellipse cx="16" cy="24" rx="12" ry="6" fill="#b0c0d4"/></svg>
+      <div class="dwb-t">15°C</div><div class="dwb-d">Wisselvallig · West</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="Cabo Girão skywalk glazen vloer hoogste zeeklif Europa Madeira">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=85&fit=crop" alt="Cabo Girão klif">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">🏔️</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Cabo Girão — Glazen Skywalk</div>
+        <div class="ac-subtitle">580m boven zee · Hoogste zeeklif van Europa</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="22" cy="12" r="5" fill="#f5c842" opacity=".9"/><line x1="31" y1="12" x2="29" y2="12" stroke="#f5c842" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="16" cy="23" rx="12" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">15°C</div><div class="acw-info"><div class="acw-cond">Wisselvallig · Soms zon</div><div class="acw-loc">Cabo Girão, Câmara de Lobos</div></div><span class="acw-note">Zuidwest = zonniger dan Funchal</span></div>
+        <p class="ac-desc">Cabo Girão is met 580 meter een van de hoogste zeekliffen ter wereld. De glazen skywalk steekt uit boven de verticale rotswand — je staat letterlijk in de lucht boven de Atlantische Oceaan. Beneden zie je de kleine fajãs (lavavelden aan de voet van het klif) die alleen per boot bereikbaar zijn. De parkeerplaats ligt direct naast het platform: twee minuten lopen, maximaal indruk.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="3">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🌧️ Als het te mistig of bewolkt is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Câmara de Lobos</div><div class="wa-alt-desc">Rij terug naar <strong>Câmara de Lobos</strong>, het kleurrijke visserdorp dat Churchill ooit schilderde. Zit met een poncha (lokale spirit) op een terrasje en bekijk de traditionele visserboten. Weinig last van mist op zee-niveau.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 45 min</span>
+          <span class="chip">📍 Câmara de Lobos</span>
+          <span class="chip tip">Gratis entree skywalk</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Calheta strand goudgeel zand strand Madeira zwemmen zonnen">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=85&fit=crop" alt="Calheta zandstrand Madeira">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🏖️</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Calheta Strand + Manifattura Di Gelato</div>
+        <div class="ac-subtitle">Goudgeel importzand · Beschut zwemwater</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="22" cy="12" r="5" fill="#f5c842" opacity=".9"/><ellipse cx="16" cy="23" rx="12" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">16°C</div><div class="acw-info"><div class="acw-cond">Deels bewolkt · Zon</div><div class="acw-loc">Calheta strand, beschut dal</div></div><span class="acw-note">Beschutste strand van Madeira</span></div>
+        <p class="ac-desc">Madeira heeft vrijwel geen zandstranden — Calheta is de uitzondering. Het goudgele zand is kunstmatig aangelegd maar de omgeving is prachtig. Het strand is goed beschut en het water is relatief rustig, ideaal voor een zorgeloze strandmiddag. Pal ernaast bevindt zich <strong>Manifattura Di Gelato</strong>, door locals beschouwd als het beste ijs van het eiland — gemaakt met Madeireense vruchten als maracujá en ananas.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="4">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>⛅ Bij te koud voor strand…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Ponta do Sol</div><div class="wa-alt-desc">Rij door naar <strong>Ponta do Sol</strong> — de zonnigste gemeente van Madeira. Klim naar het kleine kerkplein voor lunch met oceaanuitzicht bij Restaurant Solar. Minder strand, meer sfeervol dorpje.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ Hele middag</span>
+          <span class="chip highlight">Zonnebrand meenemen!</span>
+          <span class="chip tip">Ligstoel huren ± €5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="restaurant Akua Funchal moderne Portugese keuken">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=85&fit=crop" alt="Restaurant Funchal avond" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🍷</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Diner · Akua</div>
+        <div class="ac-subtitle">Moderne visrestaurant · Funchal centrum</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">13°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Avond</div><div class="acw-loc">Funchal marina</div></div><span class="acw-note">Binnen — weer irrelevant</span></div>
+        <p class="ac-desc">Akua is een van de trendiest restaurants van Funchal, gelegen direct aan de marina. Specialiteit is verse vis en zeevruchten met een moderne Aziatisch-Portugese twist. Het restaurant heeft een stijlvol interieur met uitzicht op de haven. Perfect om de zuidwestkust rit af te sluiten — besteed aandacht aan het sashimi van lokale tonijn (atum) of de ceviches van het eiland.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="5">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Ander restaurant als alternatief…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Taberna Ruel (Zona Velha)</div><div class="wa-alt-desc">Meer traditioneel maar minstens even lekker. Taverna-sfeer in het oudste deel van Funchal. Bestel de lapas grelhadas (gegrilde patella met boter en knoflook) als starter.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reservering aanbevolen</span>
+          <span class="chip">Marina Funchal</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="day-divider"></div>
+
+<!-- ═══════════════════════════════════ DAY 3 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">03</div>
+    <div class="day-header-info">
+      <div class="day-date">Vrijdag 24 april</div>
+      <h2 class="day-title">De Noordelijke Route</h2>
+      <p class="day-strategy">Regendagplan — volledig overdekte grotten + spectaculaire zwarte kust. Geen probleem bij slecht weer.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><ellipse cx="18" cy="18" rx="13" ry="7" fill="#7fa0b8"/><line x1="14" y1="25" x2="12" y2="29" stroke="#5a8aaa" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="25" x2="18" y2="29" stroke="#5a8aaa" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div class="dwb-t">13°C</div><div class="dwb-d">Regen · Noordkust</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="São Vicente Caves Volcanism Centre lavatunnels Madeira bezoekers info">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&q=85&fit=crop" alt="São Vicente lavatunnel grot">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">🌋</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">São Vicente — Grotten & Volcanism Centre</div>
+        <div class="ac-subtitle">Lavatunnels · Volledig overdekt · 700.000 jaar oud</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="18" rx="13" ry="7" fill="#7fa0b8"/><line x1="12" y1="27" x2="10" y2="31" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="27" x2="16" y2="31" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="acw-temp">18°C</div><div class="acw-info"><div class="acw-cond">Buiten regen · Grotten droog</div><div class="acw-loc">São Vicente, 18°C onder de grond</div></div><span class="acw-note">Perfecte regenactiviteit</span></div>
+        <p class="ac-desc">De grotten van São Vicente zijn gevormd door lavastroom uit de oertijd — 700.000 jaar geleden stroomde gloeiende lava van de vulkanen naar de zee en liet holle tunnels achter. De rondleiding (±45 min) gaat volledig ondergronds door dramatisch verlichte gangen, met stalactieten en vulkanische formaties. Het aangrenzende <strong>Volcanism Centre</strong> legt uit hoe Madeira zelf gevormd werd. Alles binnen — geen druppel regen.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="6">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>☀️ Als het toch droog is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Toevoeging: Ribeira da Janela</div><div class="wa-alt-desc">Combineer de grotten met een stop bij <strong>Ribeira da Janela</strong> — rotsen in zee vlak bij São Vicente met een iconisch raam-vormig gat. Mooi om even uit te stappen.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 1,5 uur</span>
+          <span class="chip highlight">€ 9 p.p.</span>
+          <span class="chip tip">18°C binnen — trui mee!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Seixal zwart lavastrand waterval zee Madeira noordkust">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=85&fit=crop" alt="Seixal zwart strand Madeira">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🌊</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Seixal — Praia do Porto do Seixal</div>
+        <div class="ac-subtitle">Zwart lavastrand · Watervallen recht in zee</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="18" rx="13" ry="7" fill="#7fa0b8"/><line x1="12" y1="27" x2="10" y2="31" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="27" x2="16" y2="31" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="27" x2="22" y2="31" stroke="#5a8aaa" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="acw-temp">13°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Buien mogelijk</div><div class="acw-loc">Seixal, noordkust</div></div><span class="acw-note">Watervallen groter bij regen</span></div>
+        <p class="ac-desc">Een van de indrukwekkendste stranden van Madeira — gitzwart lavazand met groene rotswanden eromheen. Het meest spectaculaire detail: <strong>watervallen die rechtstreeks in zee storten</strong>, direct naast het zwembad bij het strand. Je kunt er onderdoor lopen. De parkeerplaats ligt op loopafstand. Bij regen ziet dit wilde, dramatische landschap er juist op zijn best uit — de watervallen zijn dan groter dan normaal.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="7">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>⛈️ Bij zware regen of hoge golven…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Porto Moniz Zeebaden</div><div class="wa-alt-desc">Rij door naar <strong>Porto Moniz</strong> (20 min verderop) — de beroemde natuurlijke zeebaden in lavarotsen. Bij regen zijn de bassins beschut en altijd beschikbaar. Een van de meest iconische plekken van Madeira.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 1,5 uur</span>
+          <span class="chip tip">Wandelschoenen aan — natte stenen</span>
+          <span class="chip">📍 Seixal, Ribeira Brava</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="Taberna Ruel Zona Velha Funchal traditioneel Portugees eten tips">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=85&fit=crop" alt="Funchal Zona Velha sfeer" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🍷</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Diner · Taberna Ruel</div>
+        <div class="ac-subtitle">Zona Velha · Traditionele Madeireense keuken</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">12°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Droog avond</div><div class="acw-loc">Zona Velha, Funchal</div></div><span class="acw-note">Binnen — weer irrelevant</span></div>
+        <p class="ac-desc">De Zona Velha (Oude Stad) van Funchal is de gezelligste buurt van het eiland — kleurrijke geschilderde deuren, terrasjes en live muziek in de avond. Taberna Ruel is een authentiek restaurant met lokale specialiteiten: <strong>espetada</strong> (vlees aan een lauriertak), bolo do caco (lokaal brood met knoflookboter) en het goede lokale Coral-bier. De sfeer is informeel en gastvrij.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="8">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Ander restaurant als alternatief…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: O Tapassol</div><div class="wa-alt-desc">Ook in de Zona Velha, iets moderner. Kleine tapas-achtige gerechten, perfecte combinatie van lokale en internationale invloeden. Goed voor iets minder formeel.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">Casual sfeer</span>
+          <span class="chip tip">Rua de Santa Maria — beschilderde deuren bekijken</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="day-divider"></div>
+
+<!-- ═══════════════════════════════════ DAY 4 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">04</div>
+    <div class="day-header-info">
+      <div class="day-date">Zaterdag 25 april</div>
+      <h2 class="day-title">Beach Club & Glamour</h2>
+      <p class="day-strategy">De zonnigste dag — puur relaxen. Geen programma, geen wandelen. Zon, water en luxe.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><circle cx="18" cy="18" r="8" fill="#f5c842"/><line x1="18" y1="4" x2="18" y2="8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="18" x2="32" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="8" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="28" x2="18" y2="32" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="dwb-t">16°C</div><div class="dwb-d">Zonnig · UV 8</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="Lido Promenade Funchal kustpromenade rotsbaden wandelen">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=700&q=85&fit=crop" alt="Lido kustpromenade Funchal" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">🌅</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Lido Promenade</div>
+        <div class="ac-subtitle">Kustpromenade · Rotsbaden · Oceaan-café</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="8" fill="#f5c842"/><line x1="18" y1="4" x2="18" y2="8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="18" x2="32" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="8" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="28" x2="18" y2="32" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/></svg></div><div class="acw-temp">16°C</div><div class="acw-info"><div class="acw-cond">Zonnig · UV 8</div><div class="acw-loc">Funchal kust, zeeniveau</div></div><span class="acw-uv">UV 8</span></div>
+        <p class="ac-desc">De Lido Promenade is een 4 km lange kustpromenade direct langs de rotsen van Funchal — vlakbij het appartement. 's Ochtends vroeg is het hier rustig en frissend, met prachtig licht op de oceaan. De promenade loopt langs meerdere rotsbaden en het complexe <strong>Lido Municipal</strong> (zwembad met zeezicht). Geniet van een koffie bij een van de kleine cafés langs de weg voordat de stranddag begint.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="9">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>⛅ Als het bewolkt begint…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Vroeg naar Beach Club</div><div class="wa-alt-desc">Sla de promenade over en ga direct naar de Beach Club om de beste ligstoel te scoren. Bij vroeg reserveren kun je de dag zo lang mogelijk van het zwembad genieten.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 1 uur wandelen</span>
+          <span class="chip tip">Zonnebrand factor 50 meenemen (UV 8!)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Pestana CR7 Beach Club Funchal day bed zwembad lounge reserveren tips">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=700&q=85&fit=crop" alt="Beach Club zwembad lounge">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🏊</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Pestana CR7 Beach Club — Day Bed</div>
+        <div class="ac-subtitle">Privé ligstoel · Zwembad · Lounge service</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="9" fill="#f5c842"/><line x1="18" y1="3" x2="18" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="18" y1="29" x2="18" y2="33" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="3" y1="18" x2="7" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="18" x2="33" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="acw-temp">17°C</div><div class="acw-info"><div class="acw-cond">Volle zon · Ideaal strandweer</div><div class="acw-loc">Funchal, Estrada Monumental</div></div><span class="acw-uv">UV 8</span></div>
+        <p class="ac-desc">De Beach Club van het Pestana CR7 Hotel is dé plek voor een zorgeloze middag in de zon. Met een <strong>day bed reservering</strong> heb je een eigen ligplek met zonnestoelen, parasol en service aan je stoel. Het zwembad kijkt uit over de oceaan, er zijn drankjes en lichte maaltijden beschikbaar en de muziek zorgt voor de perfecte sfeer. Geen wandelen, geen verplaatsen — puur genieten.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="10">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>⛅ Alternatief zwembad bij minder zon…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Lido Municipal Complex</div><div class="wa-alt-desc">Het gemeentelijk Lido-complex heeft een groot buitenzwembad, meerdere terrassen en een restaurant. Minder exclusief, maar goedkoper en nooit vol. Goed alternatief bij bewolkt weer.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reserveer day bed vooraf!</span>
+          <span class="chip">Estrada Monumental, Funchal</span>
+          <span class="chip tip">Towels + zonnebrand meenemen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="restaurant Kampo Funchal modern vlees open keuken reserveren">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=700&q=85&fit=crop" alt="Modern restaurant interieur" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🔥</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Diner · Kampo</div>
+        <div class="ac-subtitle">Hip vlees-restaurant · Open keuken · Modern design</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="8" fill="#f5c842"/><line x1="18" y1="4" x2="18" y2="8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="18" x2="32" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="8" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="28" x2="18" y2="32" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/></svg></div><div class="acw-temp">15°C</div><div class="acw-info"><div class="acw-cond">Helder · Warme avond</div><div class="acw-loc">Funchal centrum</div></div><span class="acw-note">Binnen — weer irrelevant</span></div>
+        <p class="ac-desc">Kampo is een van de hippe nieuwkomers op de Funchal restaurant-scene. Open keuken, modern interieur en een focus op vlees en grill — van wagyu burger tot côte de boeuf. De sfeer is levendig zonder luid te zijn. Perfect voor na een dag Beach Club: relaxed, lekker en met goede cocktails. Bestel de chorizo flambé als aperitief en laat de gastheer wijn aanbevelen.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="11">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Ander restaurant als alternatief…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Armazém do Sal</div><div class="wa-alt-desc">Voormalig zoutpakhuis omgebouwd tot stijlvol restaurant. Meer romantisch, goed voor koppels. Gespecialiseerd in lokale vis en gegrild vlees met fantastisch wijnprogramma.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reservering aanbevolen</span>
+          <span class="chip">Smart casual</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="day-divider"></div>
+
+<!-- ═══════════════════════════════════ DAY 5 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">05</div>
+    <div class="day-header-info">
+      <div class="day-date">Zondag 26 april</div>
+      <h2 class="day-title">Boven de Wolken</h2>
+      <p class="day-strategy">Panoramische bergrit — per auto tot aan de top. Bewolkt is ideaal: wolkenzee onder je voeten.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><circle cx="22" cy="13" r="6" fill="#f5c842" opacity=".9"/><ellipse cx="16" cy="24" rx="12" ry="6" fill="#b0c0d4"/></svg>
+      <div class="dwb-t">15°C</div><div class="dwb-d">Bewolkt · Droog</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="Pico do Arieiro 1818 meter top Madeira boven wolken auto parkeren uitzicht">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=85&fit=crop" alt="Pico do Arieiro boven de wolken">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">⛰️</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Pico do Arieiro — 1.818 meter</div>
+        <div class="ac-subtitle">Derde hoogste top · Auto tot aan het uitzichtpunt</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="20" rx="15" ry="6" fill="#dce8f0"/><circle cx="22" cy="10" r="5" fill="#f5c842" opacity=".9"/><ellipse cx="12" cy="23" rx="10" ry="5" fill="#e8f0f8"/></svg></div><div class="acw-temp">7°C</div><div class="acw-info"><div class="acw-cond">Boven de wolken · Winderig</div><div class="acw-loc">Pico do Arieiro, 1.818m hoogte</div></div><span class="acw-note">8–10°C kouder dan Funchal!</span></div>
+        <p class="ac-desc">Pico do Arieiro is de derde hoogste berg van Madeira en het enige uitzichtpunt dat je per auto bereikt op bijna 1.818 meter hoogte. Het parkeerterrein ligt letterlijk naast het platform. Bij bewolkt weer in Funchal sta je hier <strong>boven de wolken</strong> — een onwerkelijk zee van wit onder je met alleen de bergtoppen die er bovenuit steken. De temperatuur is 8–10 graden lager dan in Funchal, neem een laagje mee. Vertrek vroeg voor de tourbussen.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="12">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🌫️ Als het te mistig is aan de top…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Curral das Freiras</div><div class="wa-alt-desc"><strong>Curral das Freiras</strong> (Vallei der Nonnen) ligt diep in een vulkanische krater — je rijdt er via spectaculaire serpentines naartoe. In de mist geeft dit een mysterieuze, dramatische sfeer. Het kleine dorpje verkoopt lokale likeur van kastanje en vlechttaart.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Vroeg vertrek vóór 09:00 uur</span>
+          <span class="chip tip">Warme laag meenemen (koud!)</span>
+          <span class="chip">⏱ ± 1 uur ter plaatse</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Santana traditionele huisjes Madeira Quinta do Furão restaurant klif terras">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=700&q=85&fit=crop" alt="Santana traditionele huisjes" onerror="this.src='https://images.unsplash.com/photo-1472396961693-142e6e269027?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🏡</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Santana + Quinta do Furão</div>
+        <div class="ac-subtitle">Driehoekige huisjes · Klif-terras lunch</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="22" cy="12" r="5" fill="#f5c842" opacity=".8"/><ellipse cx="16" cy="23" rx="12" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">14°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Droog</div><div class="acw-loc">Santana, noordkust 300m</div></div><span class="acw-note">Terras met oceaanpanorama</span></div>
+        <p class="ac-desc">Santana is beroemd om zijn driehoekige strooien huisjes (<em>palheiros</em>) — een architectuurstijl die nergens anders ter wereld voorkomt. Een paar staan er nog authentiek als museum. Van Santana rij je 10 minuten verder naar <strong>Quinta do Furão</strong>, een wijnboerderij die uitkijkt op een spectaculair klif boven de Atlantische Oceaan. Het restaurant op het terras is een van de mooiste lunchadressen van het eiland — bestel de lokale wijn en espetada.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="13">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🌧️ Bij regen in het noorden…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Achada do Teixeira</div><div class="wa-alt-desc">Een ander bergplateau dichter bij Funchal, bereikbaar per auto. Minder bekend, zeker zo spectaculair. Combineer met een warme soep bij het kleine bergcafé. Hou je jassen dicht — windgevoelige top.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reserveer Quinta do Furão vooraf</span>
+          <span class="chip">⏱ ± 2,5 uur voor alles</span>
+          <span class="chip tip">Wijnproeverij ook mogelijk</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="Belmond Reid's Palace afternoon tea Funchal traditie dress code reserveren">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=700&q=85&fit=crop" alt="Afternoon tea Belmond Reid's Palace" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop'">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🫖</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Afternoon Tea · Belmond Reid's Palace</div>
+        <div class="ac-subtitle">Iconisch grand hotel · Traditie sinds 1891</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><ellipse cx="18" cy="22" rx="13" ry="7" fill="#b0c0d4" opacity=".7"/><ellipse cx="13" cy="24" rx="9" ry="6" fill="#b0c0d4"/></svg></div><div class="acw-temp">15°C</div><div class="acw-info"><div class="acw-cond">Bewolkt · Droog · Klifterras</div><div class="acw-loc">Reid's Palace, Funchal west</div></div><span class="acw-note">Overdekt terras beschikbaar</span></div>
+        <p class="ac-desc">Reid's Palace is het oudste en meest legendarische hotel van Madeira, gebouwd in 1891 hoog boven de kliffen van Funchal. De Afternoon Tea op het beroemde terras is een tijdloze traditie — theepot, sandwiches, scones met clotted cream en patisserie, terwijl je uitkijkt over de oceaan. Beroemde gasten als George Bernard Shaw, Winston Churchill en zelfs Engelbert Humperdinck gingen je voor. <strong>Dresscode verplicht: Smart Casual</strong>. Reserveer altijd van tevoren.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="14">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Als Reid's volgeboekt is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: The Vine Hotel rooftop</div><div class="wa-alt-desc">The Vine Hotel in het centrum van Funchal heeft een spectaculaire infinity rooftop bar met hetzelfde panorama over de stad en oceaan. Minder traditioneel maar minstens even mooi voor een sunset drankje.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reservering verplicht</span>
+          <span class="chip highlight">Smart Casual — geen shorts!</span>
+          <span class="chip">Estrada Monumental 139</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="day-divider"></div>
+
+<!-- ═══════════════════════════════════ DAY 6 ═══════════════════════════════════ -->
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-num">06</div>
+    <div class="day-header-info">
+      <div class="day-date">Maandag 27 april</div>
+      <h2 class="day-title">De Grote Finale</h2>
+      <p class="day-strategy">De beste dag van de week — volle zon, UV 9. Laatste herinneringen, laatste zon, perfecte afsluiting.</p>
+    </div>
+    <div class="day-weather-badge">
+      <svg width="28" height="28" viewBox="0 0 36 36"><circle cx="18" cy="18" r="9" fill="#f5c842"/><line x1="18" y1="3" x2="18" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="18" y1="29" x2="18" y2="33" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="3" y1="18" x2="7" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="18" x2="33" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div class="dwb-t">17°C</div><div class="dwb-d">Volle zon · UV 9</div>
+    </div>
+  </div>
+
+  <div class="activities">
+
+    <div class="ac" data-ai="Mercado dos Lavradores Funchal markt exotisch fruit bloemen souvenirs tips">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=700&q=85&fit=crop" alt="Mercado dos Lavradores Funchal">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Ochtend</span>
+        <div class="ac-type-icon">🌺</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Mercado dos Lavradores</div>
+        <div class="ac-subtitle">Kleurrijke markthal · Exotisch fruit · Funchal centrum</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="9" fill="#f5c842"/><line x1="18" y1="3" x2="18" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="18" y1="29" x2="18" y2="33" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="3" y1="18" x2="7" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="18" x2="33" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="acw-temp">17°C</div><div class="acw-info"><div class="acw-cond">Zonnig · Ochtend</div><div class="acw-loc">Funchal centrum</div></div><span class="acw-uv">UV 9</span></div>
+        <p class="ac-desc">De Mercado dos Lavradores is Funchal's meest levendige markt — een architectonisch juweeltje uit 1940, bekleed met azulejo-tegels. Binnen vind je exotische vruchten die nergens anders ter wereld zo goed groeien als hier: <strong>ananas van Madeira</strong>, maracujá, tamarillo, chirimoya en babaco. Bloemenstalletjes vol met tropische orchideeën en anturium. Neem wat lokale producten mee als souvenir — de kleine flesjes poncha en ginjinha zijn perfect.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="15">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>⛅ Als de markt te druk is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Mercado da Penha</div><div class="wa-alt-desc">Kleinere lokale markt in de wijk Penha, verder van het centrum. Meer authentiek, minder toeristisch. Dezelfde verse producten voor lagere prijzen.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip">⏱ ± 45 min</span>
+          <span class="chip tip">Vroeg gaan — voor 10u het leukst</span>
+          <span class="chip">Rua Brigadeiro Oudinot</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac" data-ai="Doca do Cavacas Funchal rotsbaden loopbrug zwemmen zeebad tips">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=700&q=85&fit=crop" alt="Doca do Cavacas rotsbaden">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Middag</span>
+        <div class="ac-type-icon">🏊</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Doca do Cavacas — Rotsbaden</div>
+        <div class="ac-subtitle">Natuurlijk zwembad in lavakliffen · Loopbrug · Vlakbij appartement</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="9" fill="#f5c842"/><line x1="18" y1="3" x2="18" y2="7" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="18" y1="29" x2="18" y2="33" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="3" y1="18" x2="7" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/><line x1="29" y1="18" x2="33" y2="18" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="acw-temp">18°C</div><div class="acw-info"><div class="acw-cond">Volle zon · Beste dag van week</div><div class="acw-loc">Doca do Cavacas, Funchal west</div></div><span class="acw-uv">UV 9</span></div>
+        <p class="ac-desc">Doca do Cavacas is een van de meest fotogenieke plekken van Funchal — een complex van natuurlijke poelen uitgehakt in de zwarte lavakliffen, verbonden door een spectaculaire loopbrug recht boven de oceaan. Het water is helder en verfrissend. Met UV 9 is dit de perfecte plek voor een laatste middag in de zon. Er is een kleine bar met drankjes. Op loopafstand van het appartement — geen auto nodig.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="16">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🌊 Als de zee te wild is…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Lido Municipal Zwembad</div><div class="wa-alt-desc">Bij hoge golven zijn de rotsbaden gesloten. Het Lido Municipal ligt een paar minuten lopen verderop en heeft een beschermd buitenzwembad. Altijd beschikbaar en vergelijkbaar mooi uitzicht.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">UV 9 — Zonnebrand verplicht!</span>
+          <span class="chip tip">Op loopafstand appartement</span>
+          <span class="chip">Gratis toegang · Kleine bar aanwezig</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ac dinner" data-ai="restaurant Avista Funchal luxe uitzicht oceaan afscheidsdiner reserveren dress code">
+      <div class="ac-photo">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85&fit=crop" alt="Avista luxe restaurant Funchal">
+        <div class="ac-photo-ov"></div>
+        <span class="time-pill">Avond</span>
+        <div class="ac-type-icon">🌊</div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-title">Afscheidsdiner · Avista</div>
+        <div class="ac-subtitle">Luxe restaurant · Oceaanuitzicht · Cliff Bay Hotel</div>
+      <div class="ac-weather"><div class="acw-icon"><svg width="22" height="22" viewBox="0 0 36 36"><circle cx="18" cy="18" r="8" fill="#f5c842"/><line x1="18" y1="4" x2="18" y2="8" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="18" x2="32" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="8" y2="18" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="28" x2="18" y2="32" stroke="#f5c842" stroke-width="2" stroke-linecap="round"/></svg></div><div class="acw-temp">16°C</div><div class="acw-info"><div class="acw-cond">Helder · Warme avond</div><div class="acw-loc">Cliff Bay, Funchal west</div></div><span class="acw-note">Mooi terras bij zonsondergang</span></div>
+        <p class="ac-desc">Avista, gelegen in het vijfsterren Cliff Bay Hotel, is een van de mooiste restaurantterrassen van Madeira. Het terras hangt letterlijk aan de rotskliffen boven zee — je kijkt recht uit over de Atlantische Oceaan. Moderne Portugees-Mediterrane keuken, uitstekende wijnselectie, en een sfeer die precies het midden houdt tussen elegant en ontspannen. De perfecte plek om de mooiste week van het jaar af te sluiten. Daarna: vroeg naar bed — vertrek om 04:30.</p>
+        <div class="ai-tip"><div class="ai-tip-label">Insider tip</div><div class="ai-tip-text loading" data-key="17">Laden…</div></div>
+        <div class="weather-alt">
+          <button class="wa-toggle" onclick="toggleAlt(this)"><span>🔄 Ander afscheidsdiner…</span><span class="wa-icon">▾</span></button>
+          <div class="wa-content"><div class="wa-alt-title">Alternatief: Il Gallo d'Oro</div><div class="wa-alt-desc">Als je het helemaal groot wilt aanpakken: Il Gallo d'Oro in het Cliff Bay heeft twee Michelinsterren. Vereis vroeg reserveren. Een onvergetelijke afsluiting voor bijzondere gelegenheden.</div></div>
+        </div>
+        <div class="ac-chips">
+          <span class="chip highlight">Reservering verplicht</span>
+          <span class="chip highlight">Smart Casual</span>
+          <span class="chip tip">Vertrek huis 04:30u — vroeg thuis!</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOGISTICS -->
+<section class="logistics">
+  <div class="log-inner">
+    <h2 class="log-title">Know Before You Go</h2>
+    <div class="log-grid">
+      <div class="log-item"><div class="log-ico">🚗</div><div class="log-lbl">Parkeren Funchal</div><p class="log-txt">Garage <strong>Saba – Plaza</strong> in het centrum. Vanuit daar is alles in de binnenstad op loopafstand bereikbaar. Dagkaart ± €8.</p></div>
+      <div class="log-item"><div class="log-ico">👔</div><div class="log-lbl">Dresscode</div><p class="log-txt"><strong>Reid's Palace &amp; Avista:</strong> Smart Casual verplicht. Geen shorts, geen flipflops bij deze gelegenheden.</p></div>
+      <div class="log-item"><div class="log-ico">🌊</div><div class="log-lbl">Zwemmen in zee</div><p class="log-txt">Bij de rotsbaden (Seixal, Doca do Cavacas) kan de Atlantische Oceaan wild zijn. Check altijd de vlag — rood = gesloten. Het Lido of hotel biedt altijd een rustig alternatief.</p></div>
+      <div class="log-item"><div class="log-ico">✈️</div><div class="log-lbl">Vertrek — 28 april</div><p class="log-txt">Vlucht om <strong>06:30 uur</strong>. Rit luchthaven 20–25 min. <strong>Vertrek appartement uiterlijk 04:30 uur.</strong></p></div>
+      <div class="log-item"><div class="log-ico">📍</div><div class="log-lbl">Pico do Arieiro</div><p class="log-txt">Vertrek vóór 09:00 voor de beste kans boven de wolken en leeg parkeerterrein. Neem een warme laag mee — 8°C kouder dan Funchal.</p></div>
+      <div class="log-item"><div class="log-ico">🍽️</div><div class="log-lbl">Reserveringen</div><p class="log-txt">Zeker vooraf: <strong>Reid's Palace</strong> (tea), <strong>CR7 Beach Club</strong> (day bed), <strong>Avista</strong>, <strong>Quinta do Furão</strong> en <strong>Nini Andrade Silva</strong>.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Goede reis — geniet van elk moment.</p>
+  <p>22 April — 28 April 2026 &nbsp;·&nbsp; Madeira, Portugal</p>
+</footer>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold:.08 });
+document.querySelectorAll('.ac').forEach(el => observer.observe(el));
+
+// Weather strip compact on scroll
+const wbar = document.getElementById('wbar');
+window.addEventListener('scroll', () => {
+  wbar.classList.toggle('compact', window.scrollY > 80);
+}, { passive:true });
+
+// Alt toggle
+function toggleAlt(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// AI Insider Tips
+const prompts = [
+  "Kabelbaan Funchal naar Monte en de Jardim Tropical Monte Palace. Geef 2 concrete insider tips voor bezoekers. Maximaal 60 woorden. In het Nederlands. Geen inleiding, direct de tips.",
+  "Toboggan rit Monte Funchal Madeira. Geef 2 concrete insider tips voor bezoekers (timing, betalen, verwachtingen). Maximaal 60 woorden. In het Nederlands.",
+  "Restaurant Design Centre Nini Andrade Silva Funchal. Geef 2 concrete tips (bestellen, sfeer, reserveren). Maximaal 60 woorden. In het Nederlands.",
+  "Cabo Girão skywalk glazen klif Madeira. Geef 2 concrete insider tips. Maximaal 60 woorden. In het Nederlands.",
+  "Calheta zandstrand Madeira. Geef 2 concrete insider tips voor bezoekers. Maximaal 60 woorden. In het Nederlands.",
+  "Restaurant Akua Funchal moderne vis keuken. Geef 2 concrete bestel- of reserveringstips. Maximaal 60 woorden. In het Nederlands.",
+  "São Vicente Caves lavatunnels Madeira. Geef 2 concrete insider tips (timing, temperatuur, combineren). Maximaal 60 woorden. In het Nederlands.",
+  "Seixal zwart strand en waterval in zee Madeira noordkust. Geef 2 concrete tips voor bezoekers. Maximaal 60 woorden. In het Nederlands.",
+  "Taberna Ruel Zona Velha Funchal traditioneel Madeireens. Geef 2 concrete bestel- of bezoektips. Maximaal 60 woorden. In het Nederlands.",
+  "Lido Promenade kustpad Funchal Madeira ochtend wandeling. Geef 2 concrete insider tips. Maximaal 60 woorden. In het Nederlands.",
+  "Pestana CR7 Beach Club Funchal day bed reservering. Geef 2 concrete tips om het meeste uit de dag te halen. Maximaal 60 woorden. In het Nederlands.",
+  "Restaurant Kampo Funchal modern vlees grill. Geef 2 concrete bestel- en bezoektips. Maximaal 60 woorden. In het Nederlands.",
+  "Pico do Arieiro 1818 meter Madeira boven de wolken. Geef 2 concrete insider tips (timing, temperatuur, uitzicht). Maximaal 60 woorden. In het Nederlands.",
+  "Santana palheiros driehoekige huisjes en Quinta do Furão wijnboerderij restaurant Madeira. Geef 2 concrete tips. Maximaal 60 woorden. In het Nederlands.",
+  "Belmond Reid's Palace Funchal afternoon tea traditie. Geef 2 concrete tips (reserveren, bestellen, dress code). Maximaal 60 woorden. In het Nederlands.",
+  "Mercado dos Lavradores Funchal markt exotisch fruit. Geef 2 concrete insider tips (timing, kopen, voorkomen). Maximaal 60 woorden. In het Nederlands.",
+  "Doca do Cavacas rotsbaden Funchal Madeira. Geef 2 concrete tips voor bezoekers (veiligheid, timing, faciliteiten). Maximaal 60 woorden. In het Nederlands.",
+  "Restaurant Avista Cliff Bay Hotel Funchal afscheidsdiner. Geef 2 concrete tips (tafel kiezen, wijn, reserveren). Maximaal 60 woorden. In het Nederlands."
+];
+
+async function loadTip(key) {
+  const el = document.querySelector(`.ai-tip-text[data-key="${key}"]`);
+  if (!el) return;
+  try {
+    let text = await window.claude.complete(prompts[key]);
+    // Strip markdown: remove # headers, convert **bold** to <strong>, clean up
+    text = text
+      .replace(/^#+\s+.+\n?/gm, '')          // remove # headers
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') // **bold**
+      .replace(/\*(.+?)\*/g, '$1')             // *italic* → plain
+      .replace(/^\s*[-•]\s*/gm, '· ')          // bullets
+      .replace(/\n{2,}/g, ' ')                 // collapse double newlines
+      .trim();
+    el.innerHTML = text;
+    el.classList.remove('loading');
+  } catch(e) {
+    el.textContent = 'Tip tijdelijk niet beschikbaar.';
+    el.classList.remove('loading');
+  }
+}
+
+// Load tips in batches of 3 to avoid rate limiting
+async function loadAllTips() {
+  for (let i = 0; i < prompts.length; i += 3) {
+    await Promise.all([
+      loadTip(i),
+      i+1 < prompts.length ? loadTip(i+1) : Promise.resolve(),
+      i+2 < prompts.length ? loadTip(i+2) : Promise.resolve()
+    ]);
+    if (i + 3 < prompts.length) await new Promise(r => setTimeout(r, 800));
+  }
+}
+
+loadAllTips();
+</script>
+</body>
+</html>
